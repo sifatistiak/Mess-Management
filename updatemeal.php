@@ -142,7 +142,7 @@ if (isset($_GET['remove'])) {
         function removedinnermeal($condb){
             $date_now1 = date("Y-m-d");
             $mname = $_SESSION['name'];
-            $query2 =  "update counter set dinner = (dinner-1) where Date='$date_now1' and membername = '$mname' AND lunch > 0; ";
+            $query2 =  "update counter set dinner = (dinner-1) where Date='$date_now1' and membername = '$mname' AND dinner > 0; ";
 
             $res = $condb->query($query2);
             header("Location: updatemeal.php");
