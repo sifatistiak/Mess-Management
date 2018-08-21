@@ -30,6 +30,7 @@ if(!$_SESSION['loggedin']){
 
 <?php
 include "studentheader.php";
+date_default_timezone_set('Asia/Dhaka');
 ?>
 <div>
     <form name="form" action="" method="get">
