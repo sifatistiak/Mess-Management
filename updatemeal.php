@@ -46,6 +46,9 @@ include "studentheader.php";
         ?></h3>
     <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
 </div>
+
+<!--lunch section-->
+
 <div class="container-fluid">
     Your Selected Lunch No(For
     <?php
@@ -55,6 +58,7 @@ include "studentheader.php";
     $res = $conn->query($sql);
     if ($res && $row = $res->fetch_assoc()) {
         $lunno = $row['lunch'];
+
     }
     else {
         $sql = "insert into counter values ('$date_now1','$mname',0,0);";
@@ -84,7 +88,7 @@ function addmeal($condb){
 function removemeal($condb){
     $date_now1 = date("Y-m-d");
     $mname = $_SESSION['name'];
-    $query1 =  "update counter set lunch = (lunch-1) where Date='$date_now1' and membername = '$mname'; ";
+    $query1 =  "update counter set lunch = (lunch-1) where Date='$date_now1' and membername = '$mname' AND lunch > 0; ";
 
     $res = $condb->query($query1);
     header("Location: updatemeal.php");
@@ -138,7 +142,7 @@ if (isset($_GET['remove'])) {
         function removedinnermeal($condb){
             $date_now1 = date("Y-m-d");
             $mname = $_SESSION['name'];
-            $query2 =  "update counter set dinner = (dinner-1) where Date='$date_now1' and membername = '$mname'; ";
+            $query2 =  "update counter set dinner = (dinner-1) where Date='$date_now1' and membername = '$mname' AND lunch > 0; ";
 
             $res = $condb->query($query2);
             header("Location: updatemeal.php");
