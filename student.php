@@ -36,6 +36,7 @@ if(!$_SESSION['loggedin']){
     date_default_timezone_set('Asia/Dhaka');
     $week_day = date("l");
     echo "<h2 align = 'center'> Today is <u>".$week_day. "</u></h2>";
+    include "schedule.php";
 
     ?>
 
