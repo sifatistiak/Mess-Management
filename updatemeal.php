@@ -37,13 +37,13 @@ if(!$_SESSION['loggedin']){
 <?php
 include "studentheader.php";
 ?>
-<div class="in-middle">
+<div class="layout-align-center-center layout-row">
 <div class="container" >
     <h3><?php
 
         date_default_timezone_set('Asia/Dhaka');
         $date_now = date("l, d-M-Y, h:i:s a");
-        $date_now1 = date("Y-m-d");
+        $date_now1 = date("d-m-y");
         echo "Current Time : '$date_now'<br>";
         $mname = $_SESSION['name'];
         ?></h3>
