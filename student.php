@@ -33,6 +33,10 @@ if(!$_SESSION['loggedin']){
 
     <?php
     include "studentheader.php";
+    date_default_timezone_set('Asia/Dhaka');
+    $week_day = date("l");
+    echo "<h2 align = 'center'> Today is <u>".$week_day. "</u></h2>";
+
     ?>
 
 
