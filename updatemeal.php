@@ -27,6 +27,9 @@ if(!$_SESSION['loggedin']){
         });
     </script>
 
+    <!--link button design-->
+
+
 
 </head>
 <body >
@@ -105,9 +108,9 @@ if (isset($_GET['remove'])) {
 }
 ?>
 
-<a href='updatemeal.php?add=true'>Add one Meal</a>
+<a href='updatemeal.php?add=true' class="btn btn-success" role="button">Add one Meal</a>
 <br>
-<a href='updatemeal.php?remove=true'>Remove one Meal</a>
+<a href='updatemeal.php?remove=true' class="btn btn-danger" role="button">Remove one Meal</a>
 
     <!--
     dinner section
@@ -159,8 +162,8 @@ if (isset($_GET['remove'])) {
         }
         ?>
 
-        <a href='updatemeal.php?adddin=true'>Add one Meal</a>
+        <a href='updatemeal.php?adddin=true' class="btn btn-success" role="button">Add one Meal</a>
         <br>
-        <a href='updatemeal.php?removedin=true'>Remove one Meal</a>
+        <a href='updatemeal.php?removedin=true' class="btn btn-danger" role="button">Remove one Meal</a>
 </body>
 </html>
