@@ -29,26 +29,32 @@ if(!$_SESSION['loggedin']){
 </head>
 <body >
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-expand-lg navbar-dark bg-light">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">House 1341 (Mess Management System 1.0)</a>
+        <div class="navbar-default">
+            <a class="navbar-brand" href="student.php">House 1341 (Mess Management System 1.0)</a>
+
+
+        </div>
+        <div align="right">
             <?php
             echo $_SESSION['name'];
 
             ?>
 
             <a href="logout.php" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-log-out"></span> Log out
+                <span class="glyphicon glyphicon-log-out "></span> Log out
             </a>
         </div>
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-inverse layout-row">
             <li><a href="student.php">Home</a></li>
             <li><a href="updatemeal.php">Update Meal</a></li>
             <li><a href="countmeal.php">Count Meal</a></li>
             <li><a href="daywisecountmeal.php">Date Based Count Meal</a></li>
 
+
         </ul>
+
     </div>
 </nav>
 

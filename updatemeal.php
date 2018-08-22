@@ -38,24 +38,25 @@ if(!$_SESSION['loggedin']){
 include "studentheader.php";
 ?>
 <div class="layout-align-center-center layout-column">
-<div class="container" >
+<div>
     <h4><?php
 
         date_default_timezone_set('Asia/Dhaka');
         $date_now = date("l, d-M-Y, h:i:s a");
-        $date_now1 = date("d-m-y");
+        $date_now1 = date("Y-m-d");
+        $date_now2 = date("d-M-y");
         echo "Current Time : '$date_now'<br>";
         $mname = $_SESSION['name'];
         ?></h4>
-    <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+    <p align="center"><br>Today's Meal Count <br></p>
 </div>
 
 <!--lunch section-->
 
 <div class="container-fluid">
-    Your Selected Lunch No(For
+    Your Selected Lunch No( For
     <?php
-    echo $date_now1." ) : ";
+    echo $date_now2." ) : ";
     $lunno = -1;
     $sql = "select lunch from counter where Date='$date_now1' and membername = '$mname';";
     $res = $conn->query($sql);
@@ -128,9 +129,9 @@ if($lunno>0){
     -->
 
     <div class="container-fluid">
-        Your Selected Dinner No(For
+        Your Selected Dinner No( For
         <?php
-        echo $date_now1." ) : ";
+        echo $date_now2." ) : ";
         $dinno = -1;
         $sql = "select dinner from counter where Date='$date_now1' and membername = '$mname';";
         $res = $conn->query($sql);
