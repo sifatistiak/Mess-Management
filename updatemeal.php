@@ -37,8 +37,8 @@ if(!$_SESSION['loggedin']){
 <?php
 include "studentheader.php";
 ?>
-
-<div class="container">
+<div class="in-middle">
+<div class="container" >
     <h3><?php
 
         date_default_timezone_set('Asia/Dhaka');
@@ -188,5 +188,6 @@ if($lunno>0){
             <a href='updatemeal.php?removedin=true' class="btn btn-danger disabled" role="button">Remove one Dinner</a>
             <br><br> <br>
         <?php }?>
+    </div>
 </body>
 </html>

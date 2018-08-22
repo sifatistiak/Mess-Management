@@ -47,6 +47,13 @@ md-select .md-select-value{
 body{
       background: #39424E;
 }
+.in-middle {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
 
 .title{
     background: #A48AD4;
