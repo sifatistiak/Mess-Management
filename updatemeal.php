@@ -37,16 +37,16 @@ if(!$_SESSION['loggedin']){
 <?php
 include "studentheader.php";
 ?>
-<div class="layout-align-center-center layout-row">
+<div class="layout-align-center-center layout-column">
 <div class="container" >
-    <h3><?php
+    <h4><?php
 
         date_default_timezone_set('Asia/Dhaka');
         $date_now = date("l, d-M-Y, h:i:s a");
         $date_now1 = date("d-m-y");
         echo "Current Time : '$date_now'<br>";
         $mname = $_SESSION['name'];
-        ?></h3>
+        ?></h4>
     <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
 </div>
 
