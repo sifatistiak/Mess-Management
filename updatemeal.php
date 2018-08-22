@@ -106,12 +106,23 @@ if (isset($_GET['add'])) {
 if (isset($_GET['remove'])) {
     removemeal($conn);
 }
+if($lunno>0){
 ?>
+    <br>
+<a href='updatemeal.php?add=true' class="btn btn-success" role="button">Add one Lunch</a>
+<br><br>
+<a href='updatemeal.php?remove=true' class="btn btn-danger" role="button">Remove one Lunch</a>
+    <br><br> <br>
+    <?php }
+    elseif ($lunno<1){
 
-<a href='updatemeal.php?add=true' class="btn btn-success" role="button">Add one Meal</a>
-<br>
-<a href='updatemeal.php?remove=true' class="btn btn-danger" role="button">Remove one Meal</a>
-
+    ?>
+    <br>
+    <a href='updatemeal.php?add=true' class="btn btn-success" role="button">Add one Lunch</a>
+    <br><br>
+    <a href='updatemeal.php?remove=true' class="btn btn-danger disabled" role="button">Remove one Lunch</a>
+    <br><br> <br>
+    <?php }?>
     <!--
     dinner section
     -->
@@ -160,10 +171,22 @@ if (isset($_GET['remove'])) {
         if (isset($_GET['removedin'])) {
             removedinnermeal($conn);
         }
-        ?>
+        if($dinno>0){
+            ?>
+            <br>
+            <a href='updatemeal.php?adddin=true' class="btn btn-success" role="button">Add one Dinner</a>
+            <br><br>
+            <a href='updatemeal.php?removedin=true' class="btn btn-danger" role="button">Remove one Dinner</a>
+            <br><br> <br>
+        <?php }
+        elseif ($dinno<1){
 
-        <a href='updatemeal.php?adddin=true' class="btn btn-success" role="button">Add one Meal</a>
-        <br>
-        <a href='updatemeal.php?removedin=true' class="btn btn-danger" role="button">Remove one Meal</a>
+            ?>
+            <br>
+            <a href='updatemeal.php?adddin=true' class="btn btn-success" role="button">Add one Dinner</a>
+            <br><br>
+            <a href='updatemeal.php?removedin=true' class="btn btn-danger disabled" role="button">Remove one Dinner</a>
+            <br><br> <br>
+        <?php }?>
 </body>
 </html>
